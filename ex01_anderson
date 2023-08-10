@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+void limpar_buffer();
+float salario(void);
+float vendas(void);
+void resultados(char n[20], float x, float y);
+
+int main(void){
+
+    //declração de variáveis
+    char nome[20];
+    float a, b;
+
+    //programa principal
+    printf("Nome: ");
+    fgets(nome, 20, stdin);
+    a = salario();
+    b = vendas();
+    
+    resultados(nome, a, b);
+    return 0;
+}
+
+void limpar_buffer(){
+    int c;
+    while((c = getchar()) != '\n' && c != EOF)
+		/* discard */ ;
+}
+
+float salario(void){
+    float sal;
+    printf("Qual o salario do funcionario: R$");
+    scanf("%f", &sal);
+    return sal;
+}
+
+float vendas(void){
+    float ven;
+    printf("Total de vendas feitas: ");
+    scanf("%f", &ven);
+
+    return ven;
+}
+
+void resultados(char n[20], float x, float y){
+    printf("TOTAL = R$%.2f", x + (y * 0.15));
+}
