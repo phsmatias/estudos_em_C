@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+float combustivel(void);
+
+int main(void){
+    combustivel();
+    return 0;
+}
+
+float combustivel(void){
+    int tempo, vel_media;
+    scanf("%i", &tempo);
+    scanf("%i", &vel_media);
+
+    printf("%.3f", (float) (tempo * vel_media) / 12);
+
+    return 0;
+}
