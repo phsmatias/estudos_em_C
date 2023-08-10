@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void medidas(void);
+
+int main(void){
+    medidas();
+    return 0;
+}
+
+void medidas(void){
+    float pes;
+    printf("Quantos pes: ");
+    scanf("%f", &pes);
+
+    printf("POLEGADAS: %.0f", pes * 12);
+    printf("\nJARDAS: %.0f", pes / 3);
+    printf("\nMILHAS: %.0f", (pes / 3) / 1760);
+}
